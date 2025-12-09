@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #B8E6E1;
+}
+
+.container {
+    width: 100%;
+    max-width: 390px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #B8E6E1 0%, #A8DFD9 100%);
+    padding: 30px 20px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    color: #48C9B0;
+}
+
+.link-sair {
+    color: #48C9B0;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-sair:hover {
+    color: #5DADE2;
+    text-decoration: underline;
+}
+
+.menu-admin {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    overflow-x: auto;
+}
+
+.menu-item {
+    padding: 10px 20px;
+    background: white;
+    color: #48C9B0;
+    border: 2px solid #48C9B0;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background: #48C9B0;
+    color: white;
+}
+
+.menu-item.active {
+    background: #48C9B0;
+    color: white;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #48C9B0;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.agendamentos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.agendamento-card {
+    background: white;
+    border: 2px solid #48C9B0;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.agendamento-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.card-header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.card-nome {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2C3E50;
+    margin-bottom: 5px;
+}
+
+.card-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.card-info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info-label {
+    font-size: 13px;
+    color: #48C9B0;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.card-info-value {
+    font-size: 15px;
+    color: #555;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-confirma {
+    flex: 1;
+    padding: 10px 15px;
+    background: #48C9B0;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-confirma:hover {
+    background: #3AB39A;
+    transform: translateY(-1px);
+}
+
+.btn-alterar {
+    flex: 1;
+    padding: 10px 15px;
+    background: white;
+    color: #48C9B0;
+    border: 2px solid #48C9B0;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-alterar:hover {
+    background: #48C9B0;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-excluir {
+    flex: 1;
+    padding: 10px 15px;
+    background: white;
+    color: #FF6B6B;
+    border: 2px solid #FF6B6B;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-excluir:hover {
+    background: #FF6B6B;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.status-pendente {
+    background: #FFF3CD;
+    color: #856404;
+}
+
+.status-confirmado {
+    background: #D4EDDA;
+    color: #155724;
+}
+
+.status-cancelado {
+    background: #F8D7DA;
+    color: #721C24;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #48C9B0;
+    font-size: 16px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #48C9B0;
+}
+
+.empty-state-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.empty-state-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width: 390px) {
+    .container {
+        max-width: 100%;
+        padding: 25px 15px;
+    }
+    
+    .card-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-confirma,
+    .btn-alterar,
+    .btn-excluir {
+        width: 100%;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamentos - Clínica Vita</title>
+    <link rel="stylesheet" href="css/agendamento.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Agenda</h1>
+        
+        <form id="agendamento-form">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Tipo de Consulta</label>
+                <div class="checkbox-grid">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo_consulta" value="avaliacao">
+                        <span class="checkbox-label">Avaliação</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo_consulta" value="retorno">
+                        <span class="checkbox-label">Retorno</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo_consulta" value="consulta">
+                        <span class="checkbox-label">Consulta</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo_consulta" value="urgencia">
+                        <span class="checkbox-label">Urgência</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="data_hora">Data / hora</label>
+                <input type="datetime-local" id="data_hora" class="form-input" required>
+            </div>
+            
+            <button type="submit" class="btn-primary">Agendar</button>
+            <a href="admin.html" class="btn-secondary">Admin</a>
+            <a href="home.html" class="btn-link">Voltar</a>
+        </form>
+    </div>
+
+    <script src="agendamento.js"></script>
+</body>
+</html>

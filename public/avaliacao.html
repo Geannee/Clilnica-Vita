@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Atendimento</title>
+    <link rel="stylesheet" href="css/avaliacao.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Avaliação Atendimento</h1>
+        
+        <form id="avaliacao-form">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="estrelas">Avaliação (estrelas)</label>
+                <div class="estrelas-container">
+                    <span class="estrela" data-valor="1">☆</span>
+                    <span class="estrela" data-valor="2">☆</span>
+                    <span class="estrela" data-valor="3">☆</span>
+                    <span class="estrela" data-valor="4">☆</span>
+                    <span class="estrela" data-valor="5">☆</span>
+                </div>
+                <input type="hidden" id="estrelas" name="estrelas" value="5" required>
+            </div>
+
+            <div class="form-group">
+                <label for="experiencia">Fale-me sua experiência conosco</label>
+                <textarea id="experiencia" name="experiencia" class="form-textarea" rows="8" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-avaliar">Avaliar</button>
+            <a href="home.html" class="link-voltar">Voltar</a>
+        </form>
+    </div>
+
+    <script src="js/avaliacao.js"></script>
+</body>
+</html>
